@@ -12,6 +12,7 @@ const FoodDisplay = ({ category }) => {
       <h2>Top dishes near you</h2>
       <div className="food-display-list">
         {food_list.map((item, index) => {
+        if (category==="All" || item.category===category){
           return (
             <FoodItem
               key={index}
@@ -21,7 +22,7 @@ const FoodDisplay = ({ category }) => {
               description={item.description}
               image={item.image}
             />
-          );
+          );}
         })}
       </div>
     </div>
