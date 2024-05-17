@@ -8,7 +8,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
   return (
     <div className="login-popup">
-      <form className="login-pop-up-container">
+      <form className="login-popup-container">
         <div className="login-popup-title">
           <h2>{currState}</h2>
           <img
