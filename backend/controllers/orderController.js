@@ -1,6 +1,10 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 import Stripe from "stripe";
+import dotenv from "dotenv";
+
+
+dotenv.config();
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -27,7 +31,7 @@ const placeOrder = async (req, res) => {
                 product_data:{
                     name: item.name,
                 },  
-                unit_amout: item.price * 100,
+                unit_amount: item.price * 100,
             },
             quantity: item.quantity,
         }))
@@ -39,10 +43,12 @@ const placeOrder = async (req, res) => {
                 product_data:{
                     name: 'Delivery Charges'
                 },
-                unit_amout: 2 * 100,
+                unit_amount: 2 * 100,
             },
             quantity: 1,
         })
+
+        console.log("Creating Stripe session with line_items:", line_items);
 
         const session = await stripe.checkout.sessions.create({
             line_items: line_items,
@@ -50,10 +56,11 @@ const placeOrder = async (req, res) => {
             success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
             cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
         })
-
+        console.log("Stripe session created:", session);
         res.json({success: true, session_url: session.url})
     } catch (error) {
         console.log(error);
+        console.error("Error creating Stripe session:", error);
         res.json({success:false, message:"Error"})
         
     }
