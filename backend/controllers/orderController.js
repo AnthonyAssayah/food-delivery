@@ -48,7 +48,7 @@ const placeOrder = async (req, res) => {
             quantity: 1,
         })
 
-        console.log("Creating Stripe session with line_items:", line_items);
+        // console.log("Creating Stripe session with line_items:", line_items);
 
         const session = await stripe.checkout.sessions.create({
             line_items: line_items,
@@ -56,7 +56,7 @@ const placeOrder = async (req, res) => {
             success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
             cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
         })
-        console.log("Stripe session created:", session);
+        // console.log("Stripe session created:", session);
         res.json({success: true, session_url: session.url})
     } catch (error) {
         console.log(error);
@@ -66,4 +66,21 @@ const placeOrder = async (req, res) => {
     }
 }
 
-export { placeOrder }
+const verifyOrder = async (req, res) => {
+    const {orderId, success} = req.body;
+    try{
+        if(success=="true"){
+            await orderModel.findByIdAndUpdate(orderId, {payment: "paid"});
+            res.json({success:true, message:"Paid"});
+        }
+        else{
+            await orderModel.findByIdAndDelete(orderId);
+            res.json({success:false, message:"Not Paid"});
+        }
+    } catch(error){
+        res.json({success:false, message:"Error"});
+    }
+}
+
+
+export { placeOrder, verifyOrder }
