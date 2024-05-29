@@ -6,10 +6,11 @@
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
 - [Demo](#demo)
-- [Technologies](#technologies)
+- [Technologies - Librairies](#technologies)
 - [Installation](#installation)
 - [File Structure](#file-structure)
 - [Architecture ](#architecture)
+<br/>
 
 ## Introduction
 
@@ -18,6 +19,8 @@ for seamless payments. This comprehensive application allows users to explore di
 within their cart. Additionally, an admin panel is provided for efficient food management operations, such as adding and listing all available dishes. 
 The entire system is backed by a robust MongoDB database, ensuring secure and reliable data storage and retrieval. Dive in to experience a seamless food 
 ordering and management experience.
+
+<br/>
 
 ## Project Structure
 
@@ -38,6 +41,7 @@ ordering and management experience.
 - A specialized interface within the application for administrative tasks.
 - Allows admins to manage food items, view and process orders, and perform other essential operations to maintain and update the food delivery system.
 - Ensures that administrative users have the tools they need to efficiently oversee and control the platform, ensuring smooth and effective operations.
+<br/>
 
 ## Demo
 
@@ -47,3 +51,30 @@ https://github.com/AnthonyAssayah/food-delivery/assets/92322613/203b041b-fa41-42
 | Admin - Add | Admin - List | Admin - Orders  |
 | --- | --- | ---  |
 | ![Admin - Add](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/5fbca89d-9cd4-4347-98d0-3058b8b265d5)  | ![Admin - List](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/5d82b081-af33-4814-9fdb-5389535d6b73)| ![Admin - Orders](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/0152ec69-b157-4f62-a1e5-d2eace3c4f04)
+<br/>
+
+## Technologies - Librairies
+<br/>
+**express**: A fast and minimalist web framework for Node.js used to build the backend API, handling routing, middleware, and server-side logic.
+
+**mongoose**: An ODM (Object Data Modeling) library for MongoDB, facilitating schema-based data modeling and interaction with the MongoDB database.
+
+**axios**: A promise-based HTTP client used for making API calls to communicate between the frontend and backend of the application.
+
+**react-router-dom**: A routing library for React that allows the creation of navigation and dynamic routing within the application, providing a seamless user experience across different pages.
+
+**react-toastify**: A library for displaying notifications and alerts within the React application, enhancing user feedback with customizable toasts.
+
+**bcrypt**: A library for hashing passwords, used in the backend to securely store and verify user credentials during account creation and login processes.
+
+**cors**: A middleware for Express to enable Cross-Origin Resource Sharing, allowing the backend server to handle requests from different origins, including the frontend.
+
+**dotenv**: A module that loads environment variables from a .env file into process.env, ensuring sensitive information like API keys and database credentials are securely managed.
+
+**jsonwebtoken**: A library to create and verify JSON Web Tokens (JWTs), used for secure user authentication and authorization in the application.
+
+**stripe**: A library for handling payment processing, enabling secure and seamless transactions within the application.
+
+**validator**: A library for validating and sanitizing strings, used to ensure that input data from users is correctly formatted and safe to use.
+
+
