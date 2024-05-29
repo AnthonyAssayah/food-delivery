@@ -41,11 +41,9 @@ ordering and management experience.
 
 ## Demo
 
+https://github.com/AnthonyAssayah/food-delivery/assets/92322613/203b041b-fa41-4283-a462-4833793bd3f4
 
-| Home | Menu | Cart  |
-| --- | --- | ---  |
-| ![Home](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/42f89b66-d69a-4250-9ad5-ab7f702d0b44)  | ![Events page](https://github.com/AnthonyAssayah/AstronomicBigData/assets/92322613/566e1961-e8e2-4496-821e-426e12f44981)| ![Asteroids page](https://github.com/AnthonyAssayah/AstronomicBigData/assets/92322613/0a9c2f75-2822-432b-9c23-75feb6999dde)
 
-| Login | Orders | Admin  |
+| Admin - Add | Admin - List | Admin - Orders  |
 | --- | --- | ---  |
-| ![Dashboard page](https://github.com/AnthonyAssayah/AstronomicBigData/assets/92322613/91e60e04-aba6-4dd5-b95a-0c821a82c6d8)| ![Sun page](https://github.com/AnthonyAssayah/AstronomicBigData/assets/92322613/89431a96-b7f6-4d05-a892-6de0c6fbe590)  | ![Weather page](https://github.com/AnthonyAssayah/AstronomicBigData/assets/92322613/6ca92a4f-0743-41b8-baa5-66a6777c5769)
+| ![Admin - Add](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/5fbca89d-9cd4-4347-98d0-3058b8b265d5)  | ![Admin - List](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/5d82b081-af33-4814-9fdb-5389535d6b73)| ![Admin - Orders](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/0152ec69-b157-4f62-a1e5-d2eace3c4f04)
