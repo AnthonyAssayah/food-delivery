@@ -6,10 +6,8 @@
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
 - [Demo](#demo)
-- [Technologies - Librairies](#technologies)
+- [Technologies - Librairies](#technologies-librairies)
 - [Installation](#installation)
-- [File Structure](#file-structure)
-- [Architecture ](#architecture)
 <br/>
 
 ## Introduction
@@ -53,7 +51,7 @@ https://github.com/AnthonyAssayah/food-delivery/assets/92322613/203b041b-fa41-42
 | ![Admin - Add](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/5fbca89d-9cd4-4347-98d0-3058b8b265d5)  | ![Admin - List](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/5d82b081-af33-4814-9fdb-5389535d6b73)| ![Admin - Orders](https://github.com/AnthonyAssayah/food-delivery/assets/92322613/0152ec69-b157-4f62-a1e5-d2eace3c4f04)
 <br/>
 
-## Technologies - Librairies
+## Technologies-Librairies
 <br/>
 **express**: A fast and minimalist web framework for Node.js used to build the backend API, handling routing, middleware, and server-side logic.
 
@@ -77,4 +75,47 @@ https://github.com/AnthonyAssayah/food-delivery/assets/92322613/203b041b-fa41-42
 
 **validator**: A library for validating and sanitizing strings, used to ensure that input data from users is correctly formatted and safe to use.
 
+
+## Installation
+
+Follow these steps to set up the project locally on your machine.
+
+Prerequisites
+
+Make sure you have the following installed on your machine:
+
+ - Git
+ - Node.js
+ - npm 
+
+1- Cloning the Repository
+
+```
+    https://github.com/AnthonyAssayah/food-delivery.git
+```
+2- Installation
+
+Install the project dependencies using npm in both ```frontend```, ```backend```and ```admin``` folders:
+
+```
+npm install
+```
+3-Set Up Environment Variables
+
+Create a new file named .env in the root directory of your project and add the following content:
+
+```
+JWT_SECRET=""
+STRIPE_SECRET_KEY=""
+```
+
+Replace the placeholder values with your actual secret keys. Ensure that these keys are kept secure and not exposed publicly. If you don't have a JWT secret yet, generate a secure random string for it. For Stripe, you can obtain the secret key by signing up on the Stripe website and creating an API key.
+
+4- Run the server and the frontend
+
+```
+C:\Users\Desktop\food-del\backend>npm run server
+C:\Users\Desktop\food-del\frontend>npm run server
+```
+Open http://localhost:5173 in your browser to view the project.
 
